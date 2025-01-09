@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "875b2c80-6747-4a02-864d-4ebde3d0b5e3",
+		"name": "BloodBank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35103354",
+		"_collection_link": "https://www.postman.com/bnt-soft-8585/workspace/prepaycafeteriasystem/collection/35103354-875b2c80-6747-4a02-864d-4ebde3d0b5e3?action=share&source=collection_link&creator=35103354"
+	},
+	"item": [
+		{
+			"name": "createReceiver",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John Smith\",\r\n  \"mobile\": \"9876543211\",\r\n  \"email\": \"johnsmith@example.com\",\r\n  \"bloodGroup\": \"O+\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/donors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"donors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createDonor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"fatherName\": \"Robert Doe\",\r\n    \"motherName\": \"Margaret Doe\",\r\n    \"mobile\": \"9876543210\",\r\n    \"email\": \"john.doe@example.com\",\r\n    \"bloodGroup\": \"O+\",\r\n    \"address\": \"1234 Elm Street, Springfield\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/donor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"donor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllDonor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/donor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"donor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBloodGroup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bloodGroup\": \"A+\",\r\n    \"units\": 100\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllStocks",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "updateUnitsAndStonks",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"units\": 10\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/stock/A+",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stock",
+						"A+"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateComplete",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/receivers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"receivers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllRecivers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
